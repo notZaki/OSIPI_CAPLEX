@@ -11,6 +11,7 @@ The lexicon is hosted as a github page website (osipi.github.io/OSIPI_CAPLEX/).
 ## Repository contents
 The repo is in development but currently contains:
 
-1. the backend for the CAPLEX webpage (found on gh-pages)
-2. XML schema files and examples for lexicon-linked algorithmic encoding
+1. the "editable" source code (markdown language) for the CAPLEX website.
+2. the site files for the CAPLEX website (found on gh-pages)
+3. XML schema files and examples for lexicon-linked algorithmic encoding
 
