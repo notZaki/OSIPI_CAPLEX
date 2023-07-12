@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Example taken from paragraph 4 post-processing section of https://doi.org/10.1002/mrm.22005-->
+
+<ex:Pipeline xmlns:ex="http://www.osipi.com/osipi_paper_schema.xsd">
+    <ex:Process ex:value="Estimate AIF" ex:code="P.AE1.001">
+            <ex:Process ex:value="Mean ROI AIF" ex:code="P.AE2.002">
+                <ex:InputQuantity ex:value="Change in longitudinal relaxation rate" ex:unit="1/s"
+                    ex:code="Q.E.003"/>
+                <ex:InputQuantity ex:value="Binary AIF mask" ex:code="Q.SE.002" ex:unit="arbitrary"/>
+                <ex:OutputQuantity ex:value="Change in longitudinal relaxation rate"
+                    ex:code="Q.EL1.003.[a,b]" ex:unit="1/s" ex:subscript="a,b (arterial blood)"/>
+            </ex:Process>
+    </ex:Process>
+
+    <ex:SetEqual>"r_{1,t} (1/s/mM, Q.EL1.020.[t]) = r_{1,a,b} (1/s/mM, Q.EL1.020.[a,b])"</ex:SetEqual>
+    <ex:SetEqual>"ΔR_{1,t} (1/s, Q.EP.003.[t])/C_{t}(mM, Q.IC1.001.[t]) = ΔR_{1,a,b} (1/s, Q.EP.003.[a,b])/C_{a,b}(mM, Q.IC1.001.[a,b])"</ex:SetEqual>
+
+    <ex:Process ex:value="Model-based parameter extraction" ex:code="P.EX1.001">
+        <ex:Process ex:value="Optimisation" ex:code="G.MI1.002" ex:instance="MPFIT">
+            <ex:Process ex:value="Levenberg-Marquardt" ex:code="G.OP1.001">
+                <ex:Process ex:value="Non-linear least squares" ex:code="G.OP2.001">
+                    <ex:Model ex:value="Compartmental tissue uptake model" ex:code="M.IC1.007"/>
+                    <ex:InputQuantity ex:value="Indicator concentration" ex:unit="mM"
+                        ex:code="Q.IC1.001.[t]" ex:subscript="t (tissue)" ex:type="Static"/>
+                    <ex:InputQuantity ex:value="Time" ex:unit="s" ex:code="Q.GE1.004"
+                        ex:subscript="Not applicable" ex:type="Static"/>
+                    <ex:InputQuantity ex:value="Indicator concentration" ex:unit="mM"
+                        ex:code="Q.IC1.001.[a,b]" ex:subscript="a,b (arterial blood)"
+                        ex:type="Static"/>
+                    <ex:InputQuantity ex:value="Time" ex:unit="s" ex:code="Q.GE1.004"
+                        ex:subscript="Not applicable" ex:instance="Not applicable" ex:type="Static"/>
+                    <ex:InputQuantity ex:value="Blood flow" ex:unit="mL/min/mL" ex:code="Q.PH1.002"
+                        ex:type="Free"/>
+                    <ex:InputQuantity ex:value="Extraction fraction" ex:unit="unitless"
+                        ex:code="Q.PH1.005" ex:type="Free"/>
+                    <ex:InputQuantity ex:value="Mean transit time" ex:unit="s"
+                        ex:code="Q.PH1.006.[p]" ex:subscript="p (plasma)" ex:type="Free"/>
+                    <ex:OutputQuantity ex:value="Cost function value" ex:code="Q.OP1.004"
+                        ex:unit="arbitrary" ex:type="Free"/>
+                </ex:Process>
+                <ex:InputQuantity ex:value="Model parameters lower bounds" ex:code="Q.OP1.002"
+                    ex:unit="variable"/>
+                <ex:InputQuantity ex:value="Model parameters upper bounds" ex:code="Q.OP1.003"
+                    ex:unit="variable"/>
+                <ex:InputQuantity ex:value="Data weights" ex:code="Q.OP1.004" ex:unit="unitless"/>
+                <ex:InputQuantity ex:value="Maximum number of iterations" ex:code="Q.OP1.010"
+                    ex:unit="unitless"/>
+                <ex:InputQuantity ex:value="Convergence threshold" ex:code="Q.OP1.011"
+                    ex:unit="arbitrary"/>
+
+                <ex:OutputQuantity ex:value="Cost function value at optimum" ex:code="Q.O.005"
+                    ex:unit="arbitrary"/>
+                <ex:OutputQuantity ex:value="Blood plasma flow" ex:unit="mL/min/mL" ex:code="Q.PH1.002"
+                    ex:type="Estimated"/>
+                <ex:OutputQuantity ex:value="Extraction fraction" ex:unit="unitless" ex:code="Q.PH1.005"
+                    ex:type="Estimated"/>
+                <ex:OutputQuantity ex:value="Mean transit time" ex:unit="s" ex:code="Q.PH1.006.[p]"
+                    ex:type="Estimated" ex:subscript="p (plasma)"/>
+            </ex:Process>
+        </ex:Process>
+    </ex:Process>
+
+    <ex:SetEqual>"F_{p}(mL/min/mL, Q.PH1.002) = (1-Hct_{a} (a.u., Q.PH.012))F_{b}(mL/min/mL, Q.PH1.003)"</ex:SetEqual>
+    <ex:SetEqual>"PS (mL/min/mL, Q.PH1.004) = (E (unitless, Q.PH.005)F_{p}(mL/min/mL, Q.PH1.002))/(1-E (unitless, Q.PH.005)"</ex:SetEqual>
+
+    <ex:Process ex:value="Create binary mask" ex:code="G.SE.001">
+        <ex:Process ex:value="Freehand" ex:code="G.SE.004">
+            <ex:InputQuantity ex:value="Permeability surface area product" ex:unit="mL/min/mL" ex:code="Q.PH1.004"/>
+            <ex:OutputQuantity ex:value="Binary tissue mask" ex:unit="unitless"
+                ex:code="Q.SE.003" ex:instance="lesion mask"/>
+        </ex:Process>
+    </ex:Process>
+
+    <ex:Process ex:value="Apply binary mask" ex:code="G.SE.002">
+        <ex:InputQuantity ex:value="Blood plasma flow" ex:unit="mL/min/mL" ex:code="Q.PH1.002"/>
+        <ex:InputQuantity ex:value="Binary tissue mask" ex:unit="unitless" ex:code="Q.SE.003"
+            ex:instance="lesion mask"/>
+        <ex:OutputQuantity ex:value="Blood plasma flow" ex:unit="mL/min/mL" ex:code="Q.PH1.002" ex:instance="lesion blood flow map"/>
+    </ex:Process>
+
+    <ex:Process ex:value="Create binary mask" ex:code="G.SE.001">
+        <ex:Process ex:value="Freehand" ex:code="G.SE.004">
+            <ex:InputQuantity ex:value="Baseline signal" ex:unit="arbitrary" ex:code="Q.MS1.002"/>
+            <ex:OutputQuantity ex:value="Binary tissue mask" ex:unit="unitless"
+                ex:code="Q.SE.003" ex:instance="gray matter mask"/>
+        </ex:Process>
+    </ex:Process>
+    
+    <ex:Process ex:value="Apply binary mask" ex:code="G.SE.002">
+        <ex:InputQuantity ex:value="Blood plasma flow" ex:unit="mL/min/mL" ex:code="Q.PH1.002"/>
+        <ex:InputQuantity ex:value="Binary tissue mask" ex:unit="unitless" ex:code="Q.SE.003"
+            ex:instance="gray matter mask"/>
+        <ex:OutputQuantity ex:value="Blood plasma flow" ex:unit="mL/min/mL" ex:code="Q.PH1.002" ex:instance="gray matter blood flow map"/>
+    </ex:Process>
+    
+    <ex:Process ex:value="Create binary mask" ex:code="G.SE.001">
+        <ex:Process ex:value="Freehand" ex:code="G.SE.004">
+            <ex:InputQuantity ex:value="Baseline signal" ex:unit="arbitrary" ex:code="Q.MS1.002"/>
+            <ex:OutputQuantity ex:value="Binary tissue mask" ex:unit="unitless"
+                ex:code="Q.SE.003" ex:instance="white matter mask"/>
+        </ex:Process>
+    </ex:Process>
+    
+    <ex:Process ex:value="Apply binary mask" ex:code="G.SE.002">
+        <ex:InputQuantity ex:value="Blood plasma flow" ex:unit="mL/min/mL" ex:code="Q.PH1.002"/>
+        <ex:InputQuantity ex:value="Binary tissue mask" ex:unit="unitless" ex:code="Q.SE.003"
+            ex:instance="white matter mask"/>
+        <ex:OutputQuantity ex:value="Blood plasma flow" ex:unit="mL/min/mL" ex:code="Q.PH1.002" ex:instance="white matter blood flow map"/>
+    </ex:Process>
+    
+</ex:Pipeline>
