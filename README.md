@@ -13,3 +13,6 @@ The repo is in development but currently contains:
 
 1. the backend for the CAPLEX webpage (found on gh-pages)
 2. XML schema files and examples for lexicon-linked algorithmic encoding
+
+## Deploying changes
+Changes will need to be made on a development branch, then merged into the *main* branch. After the merge is approved, this will trigger a CI workflow to automatically generate the new docs and publish to the *gh-pages* branch, **which should not be edited manually**.
