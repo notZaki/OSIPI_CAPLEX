@@ -27,7 +27,7 @@ The items in this group are related to electromagnetic tissue properties and ele
 | -- | -- | -- | -- | -- | -- | -- |
 | Q.EL1.001.[j]| <a name="R1"></a> Longitudinal relaxation rate | *R<sub>1</sub>* -relaxation rate | *R<sub>1,j</sub>* | Longitudinal relaxation rate in compartment *j*. | 1/s | -- |
 | Q.EL1.002.[j] | <a name="R10"></a> Native longitudinal relaxation rate |Baseline *R<sub>1</sub>* | *R<sub>10,j</sub>* | Longitudinal relaxation rate in compartment *j*. | 1/s | -- |
-| Q.EL1.003.[j] | <a name="DeltaR10"></a> Change in longitudinal relaxation rate  | -- | *&#916 R<sub>1,j</sub>* | Change in longitudinal relaxation rate with respect to *R<sub>10,j</sub>* in compartment *j*. | 1/s | -- |
+| Q.EL1.003.[j] | <a name="DeltaR1"></a> Change in longitudinal relaxation rate  | -- | *&#916 R<sub>1,j</sub>* | Change in longitudinal relaxation rate with respect to *R<sub>10,j</sub>* in compartment *j*. | 1/s | -- |
 | Q.EL1.004.[j] | <a name="R2"></a>  Transverse relaxation rate (SE) | *R<sub>2</sub>*-relaxation rate | *R<sub>2,j</sub>* | Natural transverse relaxation rate (observed using a SE) in compartment *j*. | 1/s | -- |
 | Q.EL1.005.[j] | <a name="R20"></a> Native transverse relaxation rate (SE) |Baseline *R<sub>2</sub>*-relaxation rate | *R<sub>20,j</sub>* | Pre-contrast natural transverse relaxation rate (observed using a SE) in compartment *j*. | 1/s | -- |
 | Q.EL1.006.[j] | <a name="DeltaR2"></a> Change in transverse relaxation rate (SE)  | -- | *&#916 R<sub>2,j</sub>* | Change in natural transverse relaxation rate (observed using a SE) with respect to *R<sub>20</sub>* in compartment *j*. | 1/s | -- |
