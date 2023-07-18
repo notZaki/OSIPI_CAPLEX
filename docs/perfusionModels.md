@@ -96,18 +96,18 @@ We provide the differential equations and impulse response functions using the c
 
 | Code | OSIPI name| Alternative names|Notation|Description|Reference|
 | -- | -- | -- | -- | -- | -- |
-| M.IC1.001 | Linear and stationary system model | -- | LSS model | This forward model is given by the following equations: </br> $C(t)=I(t)\ast C_{a,p}(t)$ </br> with </br> [[I (Q.IC1.005)](quantities.md#IRF), [t (Q.GE1.004)](quantities.md#time)],</br> [[$C_{a,p}$ (Q.IC1.001.[a,p])](quantities.md#C), [$t$ (Q.GE1.004)](quantities.md#time)],</br> [[$C_t$ (Q.IC1.001.[t])](quantities.md#C), [$t$ (Q.GE1.004)](quantities.md#time)] | (Rempp et al. 1994) |
-| M.IC1.002 | Two-compartment exchange model | -- | 2CXM | This forward model is given by the following equations: </br> $v_p$ </br>  | -- |
-| M.IC1.003 | Distributed-parameter model  | -- | DP model | -- | -- |
-| M.IC1.004 | Tissue-homogeneity model | Johnson-Wilson model | TH model | -- | -- |
-| M.IC1.005 | Adiabatic approximation tissue model | -- | AATH model | -- | -- |
-| M.IC1.006 | Extended tofts model | Modified Tofts Model, Extended Generalized Kinetic Model, Extended Patlak model | ETM | -- | -- |
-| M.IC1.007 | Compartmental Tissue Uptake model | -- | C-TU | -- | -- |
-| M.IC1.008 | Plug-flow Tissue Uptake model | -- | P-TU | -- | -- |
-| M.IC1.009 | Patlak model | -- | PM | -- | -- |
-| M.IC1.010 | One-compartment, fast indicator exchange model | -- | 1C-FE model | -- | -- |
-| M.IC1.011 | Standard Tofts model | Tofts Model, One-compartment Model, Generalized Kinetic Model | TM | -- | -- |
-| M.IC1.012 | One-compartment, no exchange  model | -- | 1C-NE model | -- | -- |
+| M.IC1.001 |  <a name="LSS"> Linear and stationary system model | -- | LSS model | This forward model is given by the following equations: </br> $C(t)=I(t)\ast C_{a,p}(t)$ </br> with </br> [[I (Q.IC1.005)](quantities.md#IRF), [t (Q.GE1.004)](quantities.md#time)],</br> [[$C_{a,p}$ (Q.IC1.001.[a,p])](quantities.md#C), [$t$ (Q.GE1.004)](quantities.md#time)],</br> [[$C_t$ (Q.IC1.001.[t])](quantities.md#C), [$t$ (Q.GE1.004)](quantities.md#time)] | (Rempp et al. 1994) |
+| M.IC1.002 | <a name="2CXM"> Two-compartment exchange model | -- | 2CXM | This forward model is given by the following equations: </br> $v_p$ </br>  | -- |
+| M.IC1.003 | <a name="DP"> Distributed-parameter model  | -- | DP model | -- | -- |
+| M.IC1.004 | <a name="TH"> Tissue-homogeneity model | Johnson-Wilson model | TH model | -- | -- |
+| M.IC1.005 | <a name="AATH"> Adiabatic approximation tissue model | -- | AATH model | -- | -- |
+| M.IC1.006 | <a name="ETM"> Extended tofts model | Modified Tofts Model, Extended Generalized Kinetic Model, Extended Patlak model | ETM | -- | -- |
+| M.IC1.007 | <a name="CTU"> Compartmental Tissue Uptake model | -- | C-TU | -- | -- |
+| M.IC1.008 | <a name="PFTU"> Plug-flow Tissue Uptake model | -- | P-TU | -- | -- |
+| M.IC1.009 | <a name="Patlak"> Patlak model | -- | PM | -- | -- |
+| M.IC1.010 | <a name="1CFEX"> One-compartment, fast indicator exchange model | -- | 1C-FE model | -- | -- |
+| M.IC1.011 | <a name="TM"> Standard Tofts model | Tofts Model, One-compartment Model, Generalized Kinetic Model | TM | -- | -- |
+| M.IC1.012 | <a name="1CNEX"> One-compartment, no exchange  model | -- | 1C-NE model | -- | -- |
 | M.IC1.999 | <a name="not listed IC1"></a> Model not listed | -- | -- | This is a custom free-text item, which can be used if a model of interest is not listed. Please state a literature reference and request the item to be added to the lexicon for future usage. | -- |
 
 
