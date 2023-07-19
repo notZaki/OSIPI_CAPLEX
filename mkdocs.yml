@@ -15,6 +15,13 @@ nav:
   - Section M-Perfusion models: perfusionModels.md
   - Section G-General purpose processes: generalPurposeProcesses.md
 
+plugins:
+  - search:
+      lang: en
+      separator: '[\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'
+      features:
+        - search.suggest
+      
 markdown_extensions:
   - toc:
       permalink: True
