@@ -1,9 +1,10 @@
-site_name: DCE/DSC Perfusion Imaging Lexicon
-site_description: OSIPI DCE/DSC Perfusion Imaging Lexicon
+site_name: Contrast-agent based perfusion MRI lexicon (CAPLEX) v1.0.1
+site_description: CAPLEX
 site_author: Open Science Initiative for Perfusion Imaging (OSIPI)
 
 theme:
   name: material
+  logo: OSIPI_logo.png
 
 docs_dir: docs
 
