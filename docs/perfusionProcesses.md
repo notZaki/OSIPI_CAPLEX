@@ -89,8 +89,8 @@ The processes listed in this section describe commonly used methods to estimate 
 ### <a name="AIF correction and measurement preparation"></a> AIF correction and measurement preparation
 | Code | OSIPI name| Alternative names|Notation|Description|Reference|
 | -- | -- | -- | -- | -- | -- |
-| P.AE3.001 | Partial-volume effect corrected | -- | PVE |  If this item is set in the [Estimate AIF (P.AE1.0011)](#Estimate AIF) method, partial volume effects are accounted for. Otherwise, or if not specified, no partial volume effect correction was performed. | -- |
-| P.AE3.002 | Dual Bolus | -- | DB | If this item is set in the [Estimate AIF (P.AE1.0011)](#Estimate AIF) method, the full-dose AIF was reconstructed from a pre-bolus injection with a smaller dose. Otherwise, or if not specified, no dual bolus approach was used. | Risse et al. 2006 |
+| P.AE3.001 | Partial-volume effect corrected | -- | PVE |  If this item is set in the [Estimate AIF (P.AE1.001)](#Estimate AIF) method, partial volume effects are accounted for. Otherwise, or if not specified, no partial volume effect correction was performed. | -- |
+| P.AE3.002 | Dual Bolus | -- | DB | If this item is set in the [Estimate AIF (P.AE1.001)](#Estimate AIF) method, the full-dose AIF was reconstructed from a pre-bolus injection with a smaller dose. Otherwise, or if not specified, no dual bolus approach was used. | Risse et al. 2006 |
 | P.AE3.999 | Method not listed | -- | -- |This is a custom free-text item, which can be used if a method of interest is not listed. Please state a literature reference and request the item to be added to the lexicon for future usage.  | -- |
 
 
