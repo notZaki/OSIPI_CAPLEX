@@ -15,6 +15,23 @@ The repo is in development but currently contains:
 2. the "non-editable" backend for the CAPLEX webpage generated when .md files on main are deployed (found on the **gh-pages** branch)
 3. XML schema files (under development!!!) and examples for lexicon-linked algorithmic encoding (in the **/Algorithmic-encoding** directory)
 
+## Adding lexicon hyperlinks to your methods/results text (lexicon-linked free text format)
+We recommend that lexicon terminology is used in all DCE\DSC manuscripts and documentation to reduce variability in reporting. We also recommend that individual references to lexicon entries are linked directly to the webpage entry for that entry using a hyperlink. We are working on developing a tool that makes this process easier, but for the time-being these entries need to be added manually. The following steps need to be taken:
+
+1. Find the **a code**. Go to the relevant .md file for on **/docs** directory of main (e.g. quantities.md). Either open the file on github (and select *Code* tab) or open in your local repo in a text editor. Search for the entry of interest and find the ```<a name="..."></a>``` snippet for the entry of interest. This can be found in the OSIPI name column. An example is given below:
+
+```
+| Q.MS1.001.[j] | <a name="S"></a> Signal | -- | *S<sub>j</sub>* | The MR signal (magnitude, phase or complex depending on context) in compartment *j*. | a.u. | -- |
+```
+
+2. Make the hyperlink. The part of ```<a name="..."></a>``` in quotation marks must be added to the webpage name as follows: osipi.github.io/OSIPI_CAPLEX/*add section name here*/# *add part in quotation marks here*.  
+
+In this example, the **a code** is *S* and the section name is *quantities*. So the full hyperlink is  osipi.github.io/OSIPI_CAPLEX/quantities/#S. A # symbol must be added immediately after the slash and prior to the **a code**.
+
+Once you have constructed the hyperlink, test it works by entering the address in your browser. The link should take you directly to the quantity, process or model being referenced. 
+
+3. Add the hyperlink to the relevant entry in your manuscript or documentation.
+
 ## Contributing to the lexicon
 The lexicon is designed to the extensible and we actively engage researchers in the DCE/DSC MRI field to engage with its usage and development. If you would like to add or edit content (new entries etc.) of the lexicon, please either:
 1. contact the task force leads (currently Ben Dickie (ben.dickie@manchester.ac.uk) or Rianne Van der Heijden (rvanderheijd@wisc.edu) with your proposed changes. These will be reviewed at the next Task Force meeting (usually monthly).
