@@ -1,6 +1,6 @@
 
 # Sections Q: Quantities
-This is a test.
+
 ## <a name="MR signal quantities"></a> MR signal quantities
 The items in this group are related to the MR signal and quantities of the MR sequence used to acquire the signal.
 
