@@ -1,4 +1,4 @@
-# The contrast-agent based perfusion lexicon (CAPLEX)  [![DOI](https://zenodo.org/badge/498446550.svg)](https://zenodo.org/badge/latestdoi/498446550)
+# The contrast-agent based perfusion lexicon (CAPLEX)  [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.8180201.svg)](https://doi.org/10.5281/zenodo.8180201)
 
 ## Overview 
 
