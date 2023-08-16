@@ -1,5 +1,4 @@
 # The OSIPI Contrast Agent Perfusion MRI Lexicon (CAPLEX)
-![Image title][![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.8180201.svg)](https://doi.org/10.5281/zenodo.8180201){ align=right }
 
 ## What is CAPLEX?
 CAPLEX is a library of standardised (reference) definitions of quantities, models and analysis processes commonly used in contrast-agent based perfusion MRI (DCE and DSC-MRI). 
