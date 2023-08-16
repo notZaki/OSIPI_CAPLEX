@@ -17,7 +17,8 @@ nav:
     - P - Perfusion processes: perfusionProcesses.md
     - M - Perfusion models: perfusionModels.md
     - G - General purpose processes: generalPurposeProcesses.md
-  - DCE\DSC resources: resources.md
+  - DCE\DSC resources: 
+    - DCE literature library: dceliterature.md
 plugins:
   - search:
       lang: en
