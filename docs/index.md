@@ -1,16 +1,18 @@
-# OSIPI CAPLEX
+# The OSIPI Contrast Agent Perfusion MRI Lexicon (CAPLEX)
+![Image title][![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.8180201.svg)](https://doi.org/10.5281/zenodo.8180201){ align=right }
 
-## What is CAPLEX
+## What is CAPLEX?
 CAPLEX is a library of standardised (reference) definitions of quantities, models and analysis processes commonly used in contrast-agent based perfusion MRI (DCE and DSC-MRI). 
 
-## Why do we need CAPLEX
+## Why do we need CAPLEX?
 Very little guidance or standards exist relating to reporting of DCE\DSC analyses. This ultimately hinders progress of the technique towards clinical adoption. The aim of CAPLEX is to reduce reporting variability by providing reference definitions for commonly used quantities, models, or processes.
 
-## Who created CAPLEX
+## Who created CAPLEX?
 CAPLEX was created by Taskforce 4.2 of OSIPI, an intiative of the ISMRM. 
 
 ## Contributing to CAPLEX
-**Recruiting new members**
+**Currently recruiting new Taskforce members!!!**
+
 There are several ways to join the effort:
-1. Become a member of the task force: **email ben.dickie@manchester.ac.uk**. Anyone with relevant expertise can join - PhDs and postdocs working in DCE/DSC MRI field are particularly encouraged to apply. 
+1. Become a member of the task force: email **ben.dickie@manchester.ac.uk**. Anyone with relevant expertise can join - PhDs and postdocs working in DCE/DSC MRI field are particularly encouraged to apply. 
 2. To suggest edits to the lexicon, go to the CAPLEX Github page: https://github.com/OSIPI/OSIPI_CAPLEX and follow the instructions on how to contribute in the README.md. 
