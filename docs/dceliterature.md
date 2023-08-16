@@ -1,6 +1,4 @@
-# DCE\DSC Resources
-
-## DCE literature library
+# DCE literature library
 
 **OSIPI papers**
  - Dickie B.R, Ahmed Z, Arvidsson J, Bell L, Buckley DL, Debus C, Fedorov A, Floca R, Gutmann I, van der Heijden RA, van Houdt PJ, Sourbron S, Thrippleton MJ, Quarles C,  Kompan I. A community-endorsed open-source lexicon for contrast-agent based perfusion MRI (CAPLEX): A consensus guidelines report from the ISMRM Open Science Initiative for Perfusion Imaging (OSIPI), Mag Resn Med, 2023
