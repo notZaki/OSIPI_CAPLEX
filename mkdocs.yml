@@ -9,12 +9,13 @@ theme:
 docs_dir: docs
 
 nav:
-  - Introduction: index.md
+  - Overview: index.md
+  - CAPLEX structure: structure.md
   - Section Q- Quantities: quantities.md
   - Section P-Perfusion processes: perfusionProcesses.md
   - Section M-Perfusion models: perfusionModels.md
   - Section G-General purpose processes: generalPurposeProcesses.md
-
+  - DCE\DSC resources: resources.md
 plugins:
   - search:
       lang: en
