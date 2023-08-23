@@ -14,9 +14,11 @@ nav:
       - CAPLEX structure: structure.md
   - Sections:
     - Q - Quantities: quantities.md
-    - P - Perfusion processes: perfusionProcesses.md
     - M - Perfusion models: perfusionModels.md
+    - P - Perfusion processes: perfusionProcesses.md
     - G - General purpose processes: generalPurposeProcesses.md
+    - D - Derived processes: derivedProcesses.md
+    
   - DCE\DSC resources: 
     - DCE literature library: dceliterature.md
 plugins:
