@@ -5,6 +5,10 @@ site_author: Open Science Initiative for Perfusion Imaging (OSIPI)
 theme:
   name: material
   logo: OSIPI_logo.png
+  palette:
+    primary: black
+  features:
+    - search.suggest
 
 docs_dir: docs
 
@@ -22,12 +26,8 @@ nav:
   - DCE\DSC resources: 
     - DCE literature library: dceliterature.md
 plugins:
-  - search:
-      lang: en
-      separator: '[\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'
-      features:
-        - search.suggest
-      
+  - search
+
 markdown_extensions:
   - toc:
       permalink: True
