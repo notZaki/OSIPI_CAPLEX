@@ -18,6 +18,7 @@ The items in this group are related to the MR signal and quantities of the MR se
 | Q.MS1.010 | <a name="S_0"></a> Signal scaling factor | -- | *S<sub>0</sub>*  | A constant scaling factor in a signal model. $S_0$ typically includes contributions from the receiver gain, the proton density and the coil sensitivities. | -- | -- |
 | Q.MS1.011 | <a name="n k-space"></a> Number of lines to k-space center | --| *n* | The number of lines to *k*-space center in the phase encoding direction. | -- | -- |
 | Q.MS1.012 | <a name="N k-space"></a> Total number of k-space lines | -- | *N* | The total number of phase encoding lines for acquiring an image. | -- | -- |
+| Q.MS1.013 | <a name="N reps"></a> Total number of dynamic volumes | -- | *$n_{rep}$* | The total number of dynamic volumes acquired as part of the DCE- or DSC-MRI examination. | -- | -- |
 | Q.MS1.999 | <a name="not listed MS1"></a> Quantity not listed | -- | -- | This is a custom free-text item, which can be used if a quantity of interest is not listed. Please state a literature reference and request the item to be added to the lexicon for future usage. | [variable] | -- |
 
 ## <a name="Electromagnetic quantities"></a> Electromagnetic quantities
