@@ -22,6 +22,9 @@ nav:
   - DCE\DSC resources: 
     - DCE literature library: dceliterature.md
 plugins:
+  - privacy:
+      links_attr_map:
+        target: _blank
   - search:
       lang: en
       separator: '[\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'
