@@ -5,6 +5,8 @@ site_author: Open Science Initiative for Perfusion Imaging (OSIPI)
 theme:
   name: material
   logo: OSIPI_logo.png
+  icon:
+    annotation: material/arrow-right-circle
 
 docs_dir: docs
 
