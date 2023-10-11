@@ -85,7 +85,7 @@ In this group commonly used quantities with a physiological meaning are listed.
 | Q.PH1.013 | <a name="Hctf"></a> Hematocrit factor|-- | *Hct<sub>f</sub>* | Blood flow correction factor accounting for the difference in arterial hematocrit *Hct<sub>a</sub>* and capillary hematocrit *Hct<sub>c</sub>*.| -- | -- |
 | Q.PH1.014 | <a name="CTTH"></a> Capillary transit time heterogeneity | -- | *CTTH* | Standard deviation of the capillary transit time distribution.| s | -- |
 | Q.PH1.015 | <a name="OEFmax"></a> Maximum oxygen extraction fraction| -- | OEF<sup>max</max> | Upper biophysical limit of the proportion of oxygen that can be extracted by tissue. | -- | --|
-| Q.PH1.016.[j] | <a name="PELoW"></a> Pre-exchange lifetime of water | -- | $\tau_j$ | The average time water molecules spend in compartment j before exchanging into another compartment. | $s^{-1}$ | Donahue, K.M., Weisskoff, R.M., Burstein, D., 1997. https://aip.scitation.org/doi/pdf/10.1063/1.1731931 |
+| Q.PH1.016.[j] | <a name="PELoW"></a> Pre-exchange lifetime of water | -- | $\tau_j$ | The average time water molecules spend in compartment j before exchanging into another compartment. | $s^{-1}$ | [Donahue et al. 1997](https://doi.org/10.1002/jmri.1880070114),<br/> [Woessner 1961](https://doi.org/10.1063/1.1731931) |
 | Q.PH1.017.[j] | <a name="VWPF"></a> Visible water population fraction | -- | $p_j$ | The water population fraction inside compartment j. | Unitless | -- |
 | Q.PH1.999 | <a name="not listed PH1"></a> Quantity not listed | -- | -- | This is a custom free-text item, which can be used if a quantity of interest is not listed. Please state a literature reference and request the item to be added to the lexicon for future usage. | [variable] | -- |
 
