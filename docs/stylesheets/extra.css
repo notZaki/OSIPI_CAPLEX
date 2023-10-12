@@ -9,7 +9,7 @@
 /* This automatically stretches the site contents to monitor width*/
 .md-grid {
     max-width: initial;
-  }
+}
 /* Preserve words so they are not broken in the middle on newlines */
 .md-typeset td {
     overflow-wrap: break-word;

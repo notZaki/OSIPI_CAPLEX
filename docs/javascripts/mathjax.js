@@ -11,6 +11,14 @@ window.MathJax = {
   },
   menuSettings: { 
     zoom: "Double-Click"
+  },
+  MathZoom: {
+    styles: {
+      "#MathJax_Zoom": {
+        "background-color": "#737587",
+        color: "#FFFFFF"
+      }
+    }
   }
 };
 
