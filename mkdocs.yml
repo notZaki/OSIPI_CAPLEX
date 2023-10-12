@@ -64,8 +64,12 @@ markdown_extensions:
   - pymdownx.tilde
   - pymdownx.arithmatex:
       generic: true
+  - pymdownx.snippets:
+      auto_append:
+        - includes/abbreviations.md
   - attr_list
   - md_in_html
+  - abbr
 
 extra_javascript:
   - javascripts/mathjax.js
