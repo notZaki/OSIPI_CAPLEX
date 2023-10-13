@@ -3,7 +3,7 @@
 
 This is a basic tutorial on how to contribute to the website if you've never used github, git or written any code for a website before.
 
-It is advised to use a context manager and an IDE (integrated development environment) to avoid many problems that arise when setting things up. I would recommend using [Anaconda](https://docs.anaconda.com/free/anaconda/install/index.html){target = "_blank"} which installs the `conda` context manager and Visual Studio Code (VSCode) as the IDE which comes bundled with `conda`. Use the link to install Anaconda, VSCode can be installed once we set up an environment.
+It is advised to use a context manager and an IDE (integrated development environment) to avoid many problems that arise when setting things up. I would recommend using [Anaconda](https://docs.anaconda.com/free/anaconda/install/index.html){target = "_blank"} which installs the `conda` context manager. Conda comes bundles with several IDEs, but for this tutorial we will use Visual Studio Code (VSCode). Use the link to install Anaconda, VSCode can be installed once we set up an environment.
 
 ### Set up conda environment
 Advantage of using conda environments is the ability to have multiple versions of 
@@ -43,6 +43,8 @@ ordered list of packages including mkdocs-material.
     1.  On the right side of your terminal window you should see ![(new terminal)](tutorialImgs/new terminal.png) <br>click on the `+` to open a new terminal.
 
     ![(base)](tutorialImgs/(base).png)
+
+??? question "I cannot see the terminal in VSCode, what do I do?"
 
     If you cannot see the terminal at the bottom of your VSCode window, either press `Ctrl+Shift+'` or in the upper left side of VSCode window find Terminal and click New Terminal.
 
