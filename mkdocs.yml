@@ -23,7 +23,13 @@ theme:
         icon: material/weather-night
         name: Switch to light mode
   features:
-        - search.suggest
+    - search.suggest
+  icon:
+    admonition: 
+      note: fontawesome/solid/note-sticky
+      question: fontawesome/solid/circle-question
+      warning: fontawesome/solid/triangle-exclamation
+    annotation: material/plus-circle
 
 docs_dir: docs
 
@@ -31,6 +37,7 @@ nav:
   - Overview: 
       - About Caplex: index.md
       - CAPLEX structure: structure.md
+      - How to contribute: contributionTutorial.md
   - Sections:
     - Q - Quantities: quantities.md
     - M - Perfusion models: perfusionModels.md
