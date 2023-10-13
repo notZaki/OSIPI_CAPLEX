@@ -85,6 +85,8 @@ In this group commonly used quantities with a physiological meaning are listed.
 | Q.PH1.013 | <a name="Hctf"></a> Hematocrit factor|-- | *Hct<sub>f</sub>* | Blood flow correction factor accounting for the difference in arterial hematocrit *Hct<sub>a</sub>* and capillary hematocrit *Hct<sub>c</sub>*.| -- | -- |
 | Q.PH1.014 | <a name="CTTH"></a> Capillary transit time heterogeneity | -- | *CTTH* | Standard deviation of the capillary transit time distribution.| s | -- |
 | Q.PH1.015 | <a name="OEFmax"></a> Maximum oxygen extraction fraction| -- | OEF<sup>max</max> | Upper biophysical limit of the proportion of oxygen that can be extracted by tissue. | -- | --|
+| Q.PH1.016.[j] | <a name="PELoW"></a> Pre-exchange lifetime of water | -- | $\tau_j$ | The average time water molecules spend in compartment j before exchanging into another compartment. | $s^{-1}$ | [Donahue et al. 1997](https://doi.org/10.1002/jmri.1880070114){:target="_blank"},<br/> [Woessner 1961](https://doi.org/10.1063/1.1731931){:target="_blank"} |
+| Q.PH1.017.[j] | <a name="VWPF"></a> Visible water population fraction | -- | $p_j$ | The water population fraction inside compartment j. | Unitless | -- |
 | Q.PH1.999 | <a name="not listed PH1"></a> Quantity not listed | -- | -- | This is a custom free-text item, which can be used if a quantity of interest is not listed. Please state a literature reference and request the item to be added to the lexicon for future usage. | [variable] | -- |
 
 
@@ -257,7 +259,7 @@ This group lists quantities required in the context of native R1 estimation.
 
 | Code | OSIPI name| Alternative names|Notation|Description|OSIPI units|Reference|
 | -- | -- | -- | -- | -- | -- | -- |
-| Q.NR1.001 | <a name="R10_fixed"></a> Fixed $R_{10}$ value | -- | $R_{10, fixed}$ | A fixed value, e.g. a literature value, assumed as native *R<sub>1</sub>* relaxation rate value.| 1/ms | Haacke, et al. 2007 |
+| Q.NR1.001 | <a name="R10_fixed"></a> Fixed $R_{10}$ value | -- | $R_{10, fixed}$ | A fixed value, e.g. a literature value, assumed as native *R<sub>1</sub>* relaxation rate value.| 1/ms | [Haacke, et al. 2007](https://doi.org/10.1002/jmri.22987){:target="_blank"} |
 | Q.NR1.999 | <a name="not listed NR1"></a> Quantity not listed | -- | -- | This is a custom free-text item, which can be used if a quantity of interest is not listed. Please state a literature reference and request the item to be added to the lexicon for future usage. | [variable] | -- |
 
 
@@ -269,8 +271,8 @@ The items of this group are quantities which are required to describe arterial i
 | Q.AE1.001 | <a name="kMeansParams"></a> *k*-means-cluster-algorithm-parameters | -- | *[k]* | Vector of ordered inputs to the *k*-means AIF detection algorithm. | [variable units] | -- |
 | Q.AE1.002 | <a name="fuzzycMeansParams"></a> Fuzzy-c-means-cluster-algorithm-parameters | -- | *[m, $\epsilon$, c, P<sub>c</sub>, c<sub>i</sub>]* | Vector of ordered inputs to the fuzzy-c-means AIF detection algorithm. | [variable units] | -- |
 | Q.AE1.003 | <a name="PVC"></a> Partial-volume corrected | -- | PVE | If the value of this flag is 1, partial volume effects are accounted for. Otherwise, or if not specified, no partial volume effect correction was done. | -- | -- |
-| Q.AE1.004 | <a name="DB"></a> Dual Bolus | -- | DB | The full-dose AIF is reconstructed from pre-bolus injection with a smaller dose. If the value of this flag is 1, a dual bolus approach is used. Otherwise, or if not specified, no dual bolus approach is used. | -- | Risse, et al. 2006 |
-| Q.AE1.005 | <a name="PA"></a> Arterial partial volume correction factor| -- | *P<sub>A</sub>* | A factor that scales signal or indicator concentrations measured in a partial volume affected artery such that partial volume effects are removed. Usually this is estimated by deconvolving arterial and venous signals or indicator concentrations. | -- | Sourbron, et al. 2009 |
+| Q.AE1.004 | <a name="DB"></a> Dual Bolus | -- | DB | The full-dose AIF is reconstructed from pre-bolus injection with a smaller dose. If the value of this flag is 1, a dual bolus approach is used. Otherwise, or if not specified, no dual bolus approach is used. | -- | [Risse, et al. 2006](https://doi.org/10.1002/jmri.20747){:target="_blank"} |
+| Q.AE1.005 | <a name="PA"></a> Arterial partial volume correction factor| -- | *P<sub>A</sub>* | A factor that scales signal or indicator concentrations measured in a partial volume affected artery such that partial volume effects are removed. Usually this is estimated by deconvolving arterial and venous signals or indicator concentrations. | -- | [Sourbron, et al. 2009](https://doi.org/10.1002/mrm.22005){:target="_blank"} |
 | Q.AE1.999 | <a name="not listed AE1"></a> Quantity not listed | -- | -- | This is a custom free-text item, which can be used if a quantity of interest is not listed. Please state a literature reference and request the item to be added to the lexicon for future usage. | [variable] | -- |
 
 
